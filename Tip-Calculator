@@ -1,0 +1,13 @@
+#This project is to develop a tip calculator when we are about to split the bill among people💪
+# Happy coding👇
+a=input("Enter your bill: ")
+b=input("Enter the number of people to split: ")
+c=input("Enter the tip percentage: ")
+d=float(a)
+e=float(c)
+f=d/float(b)
+g=e/100
+tip=f*g
+final=f+tip
+final_amount=round(final,2)
+print(f"Each person should pay {final_amount} dollars")
