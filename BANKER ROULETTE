@@ -1,0 +1,6 @@
+import random
+names = names_string.split(", ")
+k=len(names)
+p=random.randint(0,k-1)
+k=names[p]
+print(f"{k} is going to buy the meal today!")
