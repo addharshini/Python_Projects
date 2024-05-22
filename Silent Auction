@@ -1,0 +1,42 @@
+from replit import clear
+#HINT: You can call clear() to clear the output in the console.
+
+logo = '''
+                         ___________
+                         \         /
+                          )_______(
+                          |"""""""|_.-._,.---------.,_.-._
+                          |       | | |               | | ''-.
+                          |       |_| |_             _| |_..-'
+                          |_______| '-' `'---------'` '-'
+                          )"""""""(
+                         /_________\\
+                       .-------------.
+                      /_______________\\
+'''
+print(logo)
+biding_f=False
+
+def high(record):
+  maxi=0
+  winner=""
+  for i in record:
+    amount=record[i]
+    if amount>maxi:
+      maxi=amount
+      winner=i
+  print(f"The winner is {i} with a bid of ${amount}")
+while not biding_f:
+  name=input("What is your name?: ")
+  price=int(input("What is your bid?: $"))
+  bid={}
+  bid[name]=price
+  biding=input("Are there any other bidders? Type 'yes or 'no' :")
+  if biding=="yes":
+    clear()
+  else:
+    biding_f=True
+    high(bid)    
+
+
+  
