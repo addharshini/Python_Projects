@@ -1,0 +1,26 @@
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+def encrypt(text_1,shift_1):
+    g=""
+    for j in text_1:
+        index=alphabet.index(j)
+        if index+shift_1>25:
+            index=index-26
+        f=alphabet[index+shift_1]
+        g+=f
+    print(f"The encoded text is {g}")          
+def decrypt(text_2,shift_2):
+    g=""
+    for j in text_2:
+        index=alphabet.index(j)
+        f=alphabet[index-shift_2]
+        g+=f
+    print(f"The decoded text is {g}")   
+    
+if direction=="encode":
+    encrypt(text,shift)  
+elif direction=="decode":
+    decrypt(text,shift)
